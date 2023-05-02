@@ -1266,7 +1266,7 @@
     eslint-plugin-tsdoc "^0.2.17"
     eslint-plugin-unused-imports "^2.0.0"
 
-"@youwol/flux-view@^1.0.3":
+"@youwol/flux-view@^1.0.3", "@youwol/flux-view@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@youwol/flux-view/-/flux-view-1.1.0.tgz#6bd3a09ea5d6e059936cd734d2434dc52d367f93"
   integrity sha512-KsNJl/fpWTg26/7E1Lcc/bgOVxhPwwZe5uRV8uXU1G3c427TkXaj3j3VZMhbxLPKdueEC7QO+iE3n1DX2BJ/Dg==
@@ -1286,7 +1286,7 @@
     rxjs "^6.5.5"
     typescript "^4.7.4"
 
-"@youwol/http-clients@^2.0.5":
+"@youwol/http-clients@^2.0.1", "@youwol/http-clients@^2.0.5":
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/@youwol/http-clients/-/http-clients-2.0.5.tgz#5286a766839579be8f3e38e5c294ec6c1e2db530"
   integrity sha512-XgjEAvtIm1p9Bc0vdpjHm6SprK+okwMo6D0qoBfwtRPMNU6EHxeTm1Apbd4dLdMy3FAIwAcVSqoILcYzDfMA1w==
@@ -1316,6 +1316,26 @@
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@youwol/logging/-/logging-0.1.0.tgz#c5610afdc67ca1e86847ea6e6014574dfd2bee75"
   integrity sha512-qmajvnb3x4Ad8VkmYbW+UCLn39y0NwOkg7AQPnp6YSUGcAeuJq2Ut11ZNX3tJZJXpYYR8d4IMIq/p5rcsa39BA==
+
+"@youwol/os-core@^0.1.6":
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/@youwol/os-core/-/os-core-0.1.10.tgz#bd8be31d69a13863f0d06525f4b5c2a571d9934c"
+  integrity sha512-DwPZt8IhmCpqmnl3jSiLPn8nPnLfyRo9+5fRygqqajxTKYGdr5JtXqgFhzhpnYiGVNGK0/OgOXkhwOtOGXV58w==
+  dependencies:
+    "@youwol/cdn-client" "^1.0.2"
+    "@youwol/flux-view" "^1.0.3"
+    "@youwol/http-clients" "^2.0.1"
+    "@youwol/http-primitives" "^0.1.2"
+    rxjs "^6.5.5"
+    uuid "^8.3.2"
+
+"@youwol/os-top-banner@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@youwol/os-top-banner/-/os-top-banner-0.1.2.tgz#f9e4789b95fcdd344defcb31fa5d3e7ba25c74d5"
+  integrity sha512-eYfMkXaxZ3V1UUWbJGK/ADlcvcPT2OhOlUpZvGozWN+OUTxzPTJ2H0OHpbOkw1gK01u6qHVjQc5nYq8V0E/iwA==
+  dependencies:
+    "@youwol/flux-view" "^1.1.0"
+    "@youwol/os-core" "^0.1.6"
 
 "@youwol/prettier-config@^0.1.0":
   version "0.1.0"

@@ -15,7 +15,8 @@ externals = {
     "@youwol/fv-code-mirror-editors": "^0.2.3",
     "rxjs": "^6.5.5",
     "@youwol/http-clients": "^2.0.5",
-    "@youwol/http-primitives": "^0.1.2"
+    "@youwol/http-primitives": "^0.1.2",
+    "@youwol/os-top-banner": "^0.1.2"
 }
 
 template = Template(

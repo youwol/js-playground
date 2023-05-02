@@ -6,7 +6,8 @@ const runTimeDependencies = {
         "@youwol/fv-code-mirror-editors": "^0.2.3",
         "rxjs": "^6.5.5",
         "@youwol/http-clients": "^2.0.5",
-        "@youwol/http-primitives": "^0.1.2"
+        "@youwol/http-primitives": "^0.1.2",
+        "@youwol/os-top-banner": "^0.1.2"
     },
     "includedInBundle": {}
 }
@@ -17,6 +18,7 @@ const externals = {
     "rxjs": "window['rxjs_APIv6']",
     "@youwol/http-clients": "window['@youwol/http-clients_APIv2']",
     "@youwol/http-primitives": "window['@youwol/http-primitives_APIv01']",
+    "@youwol/os-top-banner": "window['@youwol/os-top-banner_APIv01']",
     "rxjs/operators": "window['rxjs_APIv6']['operators']"
 }
 const exportedSymbols = {
@@ -43,6 +45,10 @@ const exportedSymbols = {
     "@youwol/http-primitives": {
         "apiKey": "01",
         "exportedSymbol": "@youwol/http-primitives"
+    },
+    "@youwol/os-top-banner": {
+        "apiKey": "01",
+        "exportedSymbol": "@youwol/os-top-banner"
     }
 }
 
@@ -54,7 +60,8 @@ const mainEntry : {entryFile: string,loadDependencies:string[]} = {
         "@youwol/fv-code-mirror-editors",
         "rxjs",
         "@youwol/http-clients",
-        "@youwol/http-primitives"
+        "@youwol/http-primitives",
+        "@youwol/os-top-banner"
     ]
 }
 
