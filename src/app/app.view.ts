@@ -14,6 +14,7 @@ export class AppView implements VirtualDOM {
             new TopBannerView({ appState: this.appState }),
             {
                 class: 'w-100 flex-grow-1',
+                style: { minHeight: '0px' },
                 children: [new CodeEditorView({ appState: this.appState })],
             },
         ]
