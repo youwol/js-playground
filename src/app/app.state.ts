@@ -4,17 +4,20 @@ import { BehaviorSubject, from, Observable, of, Subject } from 'rxjs'
 import { catchError, mergeMap, tap, withLatestFrom } from 'rxjs/operators'
 import * as cdnClient from '@youwol/cdn-client'
 
+const encoded = new URLSearchParams(window.location.search).get('content')
+
 export class AppState {
     public readonly ideState = new Common.IdeState({
         files: [
             {
                 path: './main',
-                content: example,
+                content: encoded ? decodeURI(encoded) : example,
             },
         ],
         defaultFileSystem: Promise.resolve(new Map<string, string>()),
     })
     public readonly run$ = new Subject()
+    public readonly url$ = new Subject<string>()
     public readonly result$: Observable<unknown>
     public readonly mode$ = new BehaviorSubject<'code' | 'view'>('code')
     public readonly message$ = new Subject()
