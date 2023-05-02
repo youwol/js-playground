@@ -1089,6 +1089,13 @@
     "@typescript-eslint/types" "5.59.2"
     eslint-visitor-keys "^3.3.0"
 
+"@typescript/vfs@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@typescript/vfs/-/vfs-1.4.0.tgz#2d22985c7666c9d4ce26eb025405e6f156aa32b0"
+  integrity sha512-Pood7yv5YWMIX+yCHo176OnF8WUlKGImFG7XlsuH14Zb1YN5+dYD3uUtS7lqZtsH7tAveNUi2NzdpQCN0yRbaw==
+  dependencies:
+    debug "^4.1.1"
+
 "@webassemblyjs/ast@1.11.5", "@webassemblyjs/ast@^1.11.5":
   version "1.11.5"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.11.5.tgz#6e818036b94548c1fb53b754b5cae3c9b208281c"
@@ -1266,6 +1273,34 @@
   dependencies:
     rxjs "^6.5.5"
 
+"@youwol/fv-code-mirror-editors@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@youwol/fv-code-mirror-editors/-/fv-code-mirror-editors-0.2.3.tgz#b74789258611f0631c2596fed98fb535cb728ff2"
+  integrity sha512-/ZO5BYcYM/NXjCVmyz3DXapoZaqlZ7LUWpII2O1tGD1L0cYw0sPnmz0B/mazbqnwv828/JRCHCLfdFJCRxNByw==
+  dependencies:
+    "@typescript/vfs" "^1.4.0"
+    "@youwol/cdn-client" "^1.0.2"
+    "@youwol/flux-view" "^1.0.3"
+    "@youwol/logging" "^0.1.0"
+    codemirror "^5.52.0"
+    rxjs "^6.5.5"
+    typescript "^4.7.4"
+
+"@youwol/http-clients@^2.0.5":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@youwol/http-clients/-/http-clients-2.0.5.tgz#5286a766839579be8f3e38e5c294ec6c1e2db530"
+  integrity sha512-XgjEAvtIm1p9Bc0vdpjHm6SprK+okwMo6D0qoBfwtRPMNU6EHxeTm1Apbd4dLdMy3FAIwAcVSqoILcYzDfMA1w==
+  dependencies:
+    "@youwol/http-primitives" "^0.1.2"
+    rxjs "^6.5.5"
+
+"@youwol/http-primitives@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@youwol/http-primitives/-/http-primitives-0.1.2.tgz#0ac9e0d660508157dd777fd6c8f83fc4bca9d540"
+  integrity sha512-wtSarBFx1qf/tOvcX9eAj3PsT4LEqI9IbD+mUf2xKvH4XKkrIUaAIdcIX9rg5eFKYVeQAi3RlTyTQyQz14/X+A==
+  dependencies:
+    rxjs "^6.5.5"
+
 "@youwol/jest-preset@0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@youwol/jest-preset/-/jest-preset-0.1.0.tgz#4b89eca72bfb1b7f3a1ec011c579c8629a727e52"
@@ -1276,6 +1311,11 @@
     jest-environment-jsdom "^29.4.3"
     jest-junit "^15.0.0"
     ts-jest "^29.0.5"
+
+"@youwol/logging@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@youwol/logging/-/logging-0.1.0.tgz#c5610afdc67ca1e86847ea6e6014574dfd2bee75"
+  integrity sha512-qmajvnb3x4Ad8VkmYbW+UCLn39y0NwOkg7AQPnp6YSUGcAeuJq2Ut11ZNX3tJZJXpYYR8d4IMIq/p5rcsa39BA==
 
 "@youwol/prettier-config@^0.1.0":
   version "0.1.0"
@@ -1838,6 +1878,11 @@ co@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/co/-/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
   integrity sha512-QVb0dM5HvG+uaxitm8wONl7jltx8dqhfU33DcqtOZcLSVIKSDDLDi7+0LbAKiyI8hD9u42m2YxXSkMGWThaecQ==
+
+codemirror@^5.52.0:
+  version "5.65.13"
+  resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.65.13.tgz#c098a6f409db8b5a7c5722788bd9fa3bb2367f2e"
+  integrity sha512-SVWEzKXmbHmTQQWaz03Shrh4nybG0wXx2MEu3FO4ezbPW8IbnZEd5iGHGEffSUaitKYa3i+pHpBsSvw8sPHtzg==
 
 collect-v8-coverage@^1.0.0:
   version "1.0.1"

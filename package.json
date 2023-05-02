@@ -56,13 +56,19 @@
     "dependencies": {
         "@youwol/cdn-client": "^1.0.2",
         "@youwol/flux-view": "^1.0.3",
-        "rxjs": "^6.5.5"
+        "@youwol/fv-code-mirror-editors": "^0.2.3",
+        "rxjs": "^6.5.5",
+        "@youwol/http-clients": "^2.0.5",
+        "@youwol/http-primitives": "^0.1.2"
     },
     "youwol": {
         "cdnDependencies": {
             "@youwol/cdn-client": "^1.0.2",
             "@youwol/flux-view": "^1.0.3",
-            "rxjs": "^6.5.5"
+            "@youwol/fv-code-mirror-editors": "^0.2.3",
+            "rxjs": "^6.5.5",
+            "@youwol/http-clients": "^2.0.5",
+            "@youwol/http-primitives": "^0.1.2"
         }
     }
 }
