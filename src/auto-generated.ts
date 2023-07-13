@@ -1,7 +1,7 @@
 
 const runTimeDependencies = {
     "externals": {
-        "@youwol/cdn-client": "^1.0.2",
+        "@youwol/cdn-client": "^2.0.6",
         "@youwol/flux-view": "^1.0.3",
         "@youwol/fv-code-mirror-editors": "^0.2.3",
         "rxjs": "^6.5.5",
@@ -12,7 +12,7 @@ const runTimeDependencies = {
     "includedInBundle": {}
 }
 const externals = {
-    "@youwol/cdn-client": "window['@youwol/cdn-client_APIv1']",
+    "@youwol/cdn-client": "window['@youwol/cdn-client_APIv2']",
     "@youwol/flux-view": "window['@youwol/flux-view_APIv1']",
     "@youwol/fv-code-mirror-editors": "window['@youwol/fv-code-mirror-editors_APIv02']",
     "rxjs": "window['rxjs_APIv6']",
@@ -23,7 +23,7 @@ const externals = {
 }
 const exportedSymbols = {
     "@youwol/cdn-client": {
-        "apiKey": "1",
+        "apiKey": "2",
         "exportedSymbol": "@youwol/cdn-client"
     },
     "@youwol/flux-view": {
@@ -76,7 +76,7 @@ export const setup = {
         assetId:'QHlvdXdvbC9qcy1wbGF5Z3JvdW5k',
     version:'0.1.0-wip',
     shortDescription:"",
-    developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/js-playground',
+    developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/js-playground&tab=doc',
     npmPackage:'https://www.npmjs.com/package/@youwol/js-playground',
     sourceGithub:'https://github.com/youwol/js-playground',
     userGuide:'https://l.youwol.com/doc/@youwol/js-playground',
@@ -91,7 +91,7 @@ export const setup = {
     },
 
     installMainModule: ({cdnClient, installParameters}:{
-        cdnClient:{install:(unknown) => Promise<Window>},
+        cdnClient:{install:(unknown) => Promise<WindowOrWorkerGlobalScope>},
         installParameters?
     }) => {
         const parameters = installParameters || {}
@@ -110,7 +110,7 @@ export const setup = {
     },
     installAuxiliaryModule: ({name, cdnClient, installParameters}:{
         name: string,
-        cdnClient:{install:(unknown) => Promise<Window>},
+        cdnClient:{install:(unknown) => Promise<WindowOrWorkerGlobalScope>},
         installParameters?
     }) => {
         const entry = secondaryEntries[name]
