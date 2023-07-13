@@ -18,7 +18,7 @@ folder_path = Path(__file__).parent
 pkg_json = parse_json(folder_path / "package.json")
 
 externals = {
-    "@youwol/cdn-client": "^1.0.2",
+    "@youwol/cdn-client": "^2.0.6",
     "@youwol/flux-view": "^1.0.3",
     "@youwol/fv-code-mirror-editors": "^0.2.3",
     "rxjs": "^6.5.5",
