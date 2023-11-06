@@ -1376,6 +1376,15 @@
     rxjs "^6.5.5"
     semver "^7.3.4"
 
+"@youwol/cdn-client@^2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@youwol/cdn-client/-/cdn-client-2.1.2.tgz#8f026cebf7b77e136dbc00f5e3b0fdd8fa2e2673"
+  integrity sha512-BCsWqwid8e5UGPZZr9ig3wH+YtEHCCF11sK2Pe8pEwaAas+CzuemDf6ZfQLlhxr/o7JjUOsb1IUk3W0JCv7J0A==
+  dependencies:
+    "@youwol/flux-view" "^1.1.0"
+    rxjs "^6.5.5"
+    semver "^7.3.4"
+
 "@youwol/eslint-config@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@youwol/eslint-config/-/eslint-config-1.0.0.tgz#867c06947cc32085d9bac832d4905a36b11442ac"
@@ -1398,18 +1407,18 @@
   dependencies:
     rxjs "^6.5.5"
 
-"@youwol/fv-code-mirror-editors@^0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@youwol/fv-code-mirror-editors/-/fv-code-mirror-editors-0.2.3.tgz#b74789258611f0631c2596fed98fb535cb728ff2"
-  integrity sha512-/ZO5BYcYM/NXjCVmyz3DXapoZaqlZ7LUWpII2O1tGD1L0cYw0sPnmz0B/mazbqnwv828/JRCHCLfdFJCRxNByw==
+"@youwol/fv-code-mirror-editors@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@youwol/fv-code-mirror-editors/-/fv-code-mirror-editors-0.3.1.tgz#a10ea7c9c83029df63fbbdc38f63132d43a8ce5b"
+  integrity sha512-eNwLds5kse4VSipcsfJKHvS7b+Jrm3kDeR9w8OLVeCne2vt38oBnmlZCH0a7Bi8Q0bmrLWVFyD37NIvuTYrQ5w==
   dependencies:
     "@typescript/vfs" "^1.4.0"
-    "@youwol/cdn-client" "^1.0.2"
+    "@youwol/cdn-client" "^2.1.2"
     "@youwol/flux-view" "^1.0.3"
     "@youwol/logging" "^0.1.0"
     codemirror "^5.52.0"
     rxjs "^6.5.5"
-    typescript "^4.7.4"
+    typescript "^5.2.2"
 
 "@youwol/http-clients@^2.0.1", "@youwol/http-clients@^2.0.5":
   version "2.0.5"
@@ -4612,6 +4621,11 @@ lunr@^2.3.9:
   resolved "https://registry.yarnpkg.com/lunr/-/lunr-2.3.9.tgz#18b123142832337dd6e964df1a5a7707b25d35e1"
   integrity sha512-zTU3DaZaF3Rt9rhN3uBMGQD3dD2/vFQqnvZCDv4dl5iOzq2IZQqTxu90r4E5J+nP70J3ilqVCrbho2eWaeW8Ow==
 
+lz-string@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/lz-string/-/lz-string-1.5.0.tgz#c1ab50f77887b712621201ba9fd4e3a6ed099941"
+  integrity sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==
+
 make-dir@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-3.1.0.tgz#415e967046b3a7f1d185277d84aa58203726a13f"
@@ -6293,11 +6307,6 @@ typedoc@^0.25.2:
     marked "^4.3.0"
     minimatch "^9.0.3"
     shiki "^0.14.1"
-
-typescript@^4.7.4:
-  version "4.9.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.5.tgz#095979f9bcc0d09da324d58d03ce8f8374cbe65a"
-  integrity sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==
 
 typescript@^5.2.2:
   version "5.2.2"

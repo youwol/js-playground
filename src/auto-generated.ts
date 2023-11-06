@@ -3,7 +3,7 @@ const runTimeDependencies = {
     "externals": {
         "@youwol/cdn-client": "^2.0.6",
         "@youwol/flux-view": "^1.0.3",
-        "@youwol/fv-code-mirror-editors": "^0.2.3",
+        "@youwol/fv-code-mirror-editors": "^0.3.1",
         "rxjs": "^6.5.5",
         "@youwol/http-clients": "^2.0.5",
         "@youwol/http-primitives": "^0.1.2",
@@ -14,7 +14,7 @@ const runTimeDependencies = {
 const externals = {
     "@youwol/cdn-client": "window['@youwol/cdn-client_APIv2']",
     "@youwol/flux-view": "window['@youwol/flux-view_APIv1']",
-    "@youwol/fv-code-mirror-editors": "window['@youwol/fv-code-mirror-editors_APIv02']",
+    "@youwol/fv-code-mirror-editors": "window['@youwol/fv-code-mirror-editors_APIv03']",
     "rxjs": "window['rxjs_APIv6']",
     "@youwol/http-clients": "window['@youwol/http-clients_APIv2']",
     "@youwol/http-primitives": "window['@youwol/http-primitives_APIv01']",
@@ -31,7 +31,7 @@ const exportedSymbols = {
         "exportedSymbol": "@youwol/flux-view"
     },
     "@youwol/fv-code-mirror-editors": {
-        "apiKey": "02",
+        "apiKey": "03",
         "exportedSymbol": "@youwol/fv-code-mirror-editors"
     },
     "rxjs": {
