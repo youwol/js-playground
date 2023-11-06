@@ -34,7 +34,10 @@ template = Template(
     version=pkg_json["version"],
     shortDescription=pkg_json["description"],
     author=pkg_json["author"],
-    dependencies=Dependencies(runTime=RunTimeDeps(externals=externals)),
+    dependencies=Dependencies(
+        runTime=RunTimeDeps(externals=externals),
+        devTime={"lz-string": "^1.5.0"}
+    ),
     bundles=Bundles(
         mainModule=MainModule(
             entryFile="./main.ts", loadDependencies=list(externals.keys())
