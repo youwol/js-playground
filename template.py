@@ -20,7 +20,7 @@ pkg_json = parse_json(folder_path / "package.json")
 externals = {
     "@youwol/cdn-client": "^2.0.6",
     "@youwol/flux-view": "^1.0.3",
-    "@youwol/fv-code-mirror-editors": "^0.2.3",
+    "@youwol/fv-code-mirror-editors": "^0.3.1",
     "rxjs": "^6.5.5",
     "@youwol/http-clients": "^2.0.5",
     "@youwol/http-primitives": "^0.1.2",
