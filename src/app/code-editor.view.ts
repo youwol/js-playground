@@ -12,7 +12,7 @@ export class CodeEditorView implements VirtualDOM {
         const ideView = new Common.CodeEditorView({
             ideState: this.appState.ideState,
             path: './main',
-            language: 'javascript',
+            language: 'htmlmixed',
             config: {
                 extraKeys: {
                     'Ctrl-Enter': () => {
@@ -38,7 +38,14 @@ export class CodeEditorView implements VirtualDOM {
                     mode == 'view' ? 'flex-grow-1' : 'd-none',
                 ),
                 style: { minHeight: '0px' },
-                children: [child$(this.appState.result$, (vDom) => vDom)],
+                children: [
+                    {
+                        tag: 'iframe',
+                        width: '100%',
+                        style: { height: '100%', backgroundColor: 'white' },
+                        srcdoc: attr$(this.appState.result$, (r) => r),
+                    },
+                ],
             },
             { class: 'my-2' },
         ]
