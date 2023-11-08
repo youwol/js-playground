@@ -74,13 +74,13 @@ const entries = {
 export const setup = {
     name:'@youwol/js-playground',
         assetId:'QHlvdXdvbC9qcy1wbGF5Z3JvdW5k',
-    version:'0.1.1-wip',
+    version:'0.2.0',
     shortDescription:"",
     developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/js-playground&tab=doc',
     npmPackage:'https://www.npmjs.com/package/@youwol/js-playground',
     sourceGithub:'https://github.com/youwol/js-playground',
     userGuide:'https://l.youwol.com/doc/@youwol/js-playground',
-    apiVersion:'01',
+    apiVersion:'02',
     runTimeDependencies,
     externals,
     exportedSymbols,
@@ -105,7 +105,7 @@ export const setup = {
             modules,
             scripts,
         }).then(() => {
-            return window[`@youwol/js-playground_APIv01`]
+            return window[`@youwol/js-playground_APIv02`]
         })
     },
     installAuxiliaryModule: ({name, cdnClient, installParameters}:{
@@ -120,7 +120,7 @@ export const setup = {
         const parameters = installParameters || {}
         const scripts = [
             ...(parameters.scripts || []),
-            `@youwol/js-playground#0.1.1-wip~dist/@youwol/js-playground/${entry.name}.js`
+            `@youwol/js-playground#0.2.0~dist/@youwol/js-playground/${entry.name}.js`
         ]
         const modules = [
             ...(parameters.modules || []),
@@ -131,7 +131,7 @@ export const setup = {
             modules,
             scripts,
         }).then(() => {
-            return window[`@youwol/js-playground/${entry.name}_APIv01`]
+            return window[`@youwol/js-playground/${entry.name}_APIv02`]
         })
     },
     getCdnDependencies(name?: string){
