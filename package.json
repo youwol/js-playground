@@ -1,6 +1,6 @@
 {
     "name": "@youwol/js-playground",
-    "description": "",
+    "description": "Small playground for index.html + js application",
     "version": "0.2.0",
     "author": "greinisch@youwol.com",
     "homepage": "https://github.com/youwol/js-playground#README.md",
