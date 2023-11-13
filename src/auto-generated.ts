@@ -74,8 +74,8 @@ const entries = {
 export const setup = {
     name:'@youwol/js-playground',
         assetId:'QHlvdXdvbC9qcy1wbGF5Z3JvdW5k',
-    version:'0.2.0',
-    shortDescription:"",
+    version:'0.2.2-wip',
+    shortDescription:"Small playground for index.html + js application",
     developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/js-playground&tab=doc',
     npmPackage:'https://www.npmjs.com/package/@youwol/js-playground',
     sourceGithub:'https://github.com/youwol/js-playground',
@@ -120,7 +120,7 @@ export const setup = {
         const parameters = installParameters || {}
         const scripts = [
             ...(parameters.scripts || []),
-            `@youwol/js-playground#0.2.0~dist/@youwol/js-playground/${entry.name}.js`
+            `@youwol/js-playground#0.2.2-wip~dist/@youwol/js-playground/${entry.name}.js`
         ]
         const modules = [
             ...(parameters.modules || []),
