@@ -1,6 +1,6 @@
 # @youwol/js-playground
 
-
+Small playground for index.html + js application
 
 This library is part of the hybrid cloud/local ecosystem
 [YouWol](https://platform.youwol.com/applications/@youwol/platform/latest).
