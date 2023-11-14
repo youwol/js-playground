@@ -1,13 +1,14 @@
 export const example = `<!DOCTYPE html>
 <html lang="en">
-    <head><script src="https://webpm.org/^2.0.4/cdn-client.js"></script></head>
+    <head><script src="https://webpm.org/^2.2.0/webpm-client.js"></script></head>
     
     <body id="content"></body>    
     
     <script type="module">
-        const client = window['@youwol/cdn-client']
-        const {rxDom, rxjs} = await client.install({
-            modules:['@youwol/rx-vdom as rxDom'],
+        const {rxDom, rxjs} = await webpm.install({
+            modules:[
+                '@youwol/rx-vdom as rxDom',
+                'rxjs#^7.5.6 as rxjs'],
             displayLoadingScreen: true,
         })
         const vDOM = {
