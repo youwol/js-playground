@@ -30,7 +30,7 @@
     },
     "dependencies": {
         "@youwol/cdn-client": "^2.0.6",
-        "@youwol/flux-view": "^1.0.3",
+        "@youwol/flux-view": "^1.2.0",
         "@youwol/fv-code-mirror-editors": "^0.3.1",
         "rxjs": "^6.5.5",
         "@youwol/http-clients": "^2.0.5",
@@ -53,10 +53,10 @@
         "isomorphic-fetch": "^3.0.0",
         "mini-css-extract-plugin": "^2.7.6",
         "source-map-loader": "4.0.1",
-        "ts-loader": "^9.5.0",
-        "ts-node": "^10.9.1",
+        "ts-loader": "9.5.0",
+        "ts-node": "10.9.1",
         "typedoc": "^0.25.2",
-        "typescript": "^5.2.2",
+        "typescript": "5.2.2",
         "webpack": "^5.89.0",
         "webpack-bundle-analyzer": "^4.9.1",
         "webpack-cli": "5.1.4",
@@ -65,7 +65,7 @@
     "webpm": {
         "dependencies": {
             "@youwol/cdn-client": "^2.0.6",
-            "@youwol/flux-view": "^1.0.3",
+            "@youwol/flux-view": "^1.2.0",
             "@youwol/fv-code-mirror-editors": "^0.3.1",
             "rxjs": "^6.5.5",
             "@youwol/http-clients": "^2.0.5",
