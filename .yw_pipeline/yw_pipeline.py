@@ -6,7 +6,7 @@ from youwol.app.routers.projects import (
     Link,
     BrowserAppGraphics,
 )
-from youwol.pipelines.pipeline_typescript_weback_npm import pipeline, PipelineConfig
+from youwol.pipelines.pipeline_typescript_weback_npm import pipeline, PipelineConfig, PublishConfig
 from youwol.utils.context import Context
 
 
@@ -17,16 +17,51 @@ class PipelineFactory(IPipelineFactory):
     async def get(self, _env: YouwolEnvironment, context: Context):
         config = PipelineConfig(
             target=BrowserApp(
-                displayName="@youwol/js-playground",
+                displayName="JS playground",
                 execution=Execution(standalone=True),
                 graphics=BrowserAppGraphics(
-                    appIcon={"class": "far fa-laugh-beam fa-2x"}, fileIcon={}
+                    appIcon=icon(size_px='100%', border_radius='15%', icon_path=app_icon),
+                    fileIcon=icon(size_px='100%', border_radius='15%', icon_path=file_icon, bg_size='contain'),
+                    background={
+                        "class": "h-100 w-100",
+                        "style": {
+                            "opacity": 0.3,
+                            "background-image": app_icon,
+                            "background-size": "cover",
+                            "background-repeat": "no-repeat",
+                            "background-position": "center center",
+                            "filter": "drop-shadow(rgb(0, 0, 0) 1px 3px 5px)",
+                        },
+                    },
                 ),
                 links=[
                     Link(name="doc", url="dist/docs/index.html"),
                     Link(name="coverage", url="coverage/lcov-report/index.html"),
                     Link(name="bundle-analysis", url="dist/bundle-analysis.html"),
                 ],
+            ),
+            publishConfig=PublishConfig(
+                packagedFolders=["assets"]
             )
         )
         return await pipeline(config, context)
+
+
+assets_dir = '/api/assets-gateway/raw/package/QHlvdXdvbC9qcy1wbGF5Z3JvdW5k/0.2.0/assets'
+app_icon = f"url('{assets_dir}/js_playground_app.svg')"
+file_icon = f"url('{assets_dir}/js_playground_file.svg')"
+
+
+def icon(size_px: str, border_radius: str, icon_path: str, bg_size: str = "cover"):
+    return {
+        "style": {
+            "width": f"{size_px}",
+            "height": f"{size_px}",
+            "background-image": icon_path,
+            "background-size": bg_size,
+            "background-repeat": "no-repeat",
+            "background-position": "center center",
+            "filter": "drop-shadow(rgb(0, 0, 0) 1px 3px 5px)",
+            "border-radius": f"{border_radius}",
+        }
+    }
