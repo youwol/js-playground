@@ -9,7 +9,7 @@ from youwol.app.routers.projects import (
     BrowserAppGraphics,
 )
 from youwol.pipelines.pipeline_typescript_weback_npm import pipeline, PipelineConfig, PublishConfig
-from youwol.utils import parse_json
+from youwol.utils import parse_json, encode_id
 from youwol.utils.context import Context
 
 
@@ -52,8 +52,10 @@ class PipelineFactory(IPipelineFactory):
 
 folder_path = Path(__file__).parent.parent
 pkg_json = parse_json(folder_path / "package.json")
+asset_id = encode_id(pkg_json['name'])
+version = pkg_json['version']
 
-assets_dir = f"/api/assets-gateway/raw/package/QHlvdXdvbC9qcy1wbGF5Z3JvdW5k/{pkg_json['version']}/assets"
+assets_dir = f"/api/assets-gateway/raw/package/{asset_id}/{version}/assets"
 app_icon = f"url('{assets_dir}/js_playground_app.svg')"
 file_icon = f"url('{assets_dir}/js_playground_file.svg')"
 
