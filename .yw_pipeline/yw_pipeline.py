@@ -54,8 +54,7 @@ folder_path = Path(__file__).parent.parent
 pkg_json = parse_json(folder_path / "package.json")
 asset_id = encode_id(pkg_json['name'])
 version = pkg_json['version']
-
-assets_dir = f"/api/assets-gateway/raw/package/{asset_id}/{version}/assets"
+assets_dir = f"/api/assets-gateway/cdn-backend/resources/{asset_id}/{version}/assets"
 app_icon = f"url('{assets_dir}/js_playground_app.svg')"
 file_icon = f"url('{assets_dir}/js_playground_file.svg')"
 
