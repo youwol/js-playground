@@ -1,11 +1,12 @@
-import { VirtualDOM, child$, attr$ } from '@youwol/flux-view'
-import { Common } from '@youwol/fv-code-mirror-editors'
+import { VirtualDOM, ChildrenLike } from '@youwol/rx-vdom'
+import { Common } from '@youwol/rx-code-mirror-editors'
 import { AppState } from './app.state'
 
-export class CodeEditorView implements VirtualDOM {
+export class CodeEditorView implements VirtualDOM<'div'> {
     public readonly appState: AppState
+    public readonly tag = 'div'
     public readonly class = 'w-100 h-100 d-flex flex-column p-1'
-    public readonly children: VirtualDOM[]
+    public readonly children: ChildrenLike
 
     constructor(params: { appState: AppState }) {
         Object.assign(this, params)
@@ -22,40 +23,49 @@ export class CodeEditorView implements VirtualDOM {
             },
         })
         this.children = [
-            child$(
-                this.appState.message$,
-                (message) => new MessageView(message),
-            ),
             {
-                class: attr$(this.appState.mode$, (mode) =>
-                    mode == 'code' ? 'flex-grow-1' : 'd-none',
-                ),
+                source$: this.appState.message$,
+                vdomMap: (message) => new MessageView(message),
+            },
+            {
+                tag: 'div',
+                class: {
+                    source$: this.appState.mode$,
+                    vdomMap: (mode) =>
+                        mode == 'code' ? 'flex-grow-1' : 'd-none',
+                },
                 style: { minHeight: '0px' },
                 children: [ideView],
             },
             {
-                class: attr$(this.appState.mode$, (mode) =>
-                    mode == 'view' ? 'flex-grow-1' : 'd-none',
-                ),
+                tag: 'div',
+                class: {
+                    source$: this.appState.mode$,
+                    vdomMap: (mode) =>
+                        mode == 'view' ? 'flex-grow-1' : 'd-none',
+                },
                 style: { minHeight: '0px' },
                 children: [
                     {
                         tag: 'iframe',
                         width: '100%',
                         style: { height: '100%', backgroundColor: 'white' },
-                        srcdoc: attr$(this.appState.result$, (r) => r),
+                        srcdoc: {
+                            source$: this.appState.result$,
+                            vdomMap: (r: string) => r,
+                        },
                     },
                 ],
             },
-            { class: 'my-2' },
+            { tag: 'div', class: 'my-2' },
         ]
     }
 }
 
-export class MessageView implements VirtualDOM {
+export class MessageView implements VirtualDOM<'pre'> {
     public readonly tag = 'pre'
     public readonly class = 'd-flex align-items-center fv-text-primary'
-    public readonly children: VirtualDOM[]
+    public readonly children: ChildrenLike
 
     constructor(message) {
         if (message == 'done') {
@@ -63,11 +73,10 @@ export class MessageView implements VirtualDOM {
         }
         this.children = [
             {
+                tag: 'div',
                 class: 'fas fa-spinner fa-spin mx-2',
             },
-            {
-                innerText: message,
-            },
+            { tag: 'div', innerText: message },
         ]
     }
 }

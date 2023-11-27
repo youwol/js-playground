@@ -1,53 +1,52 @@
 
 const runTimeDependencies = {
     "externals": {
-        "@youwol/cdn-client": "^2.0.6",
-        "@youwol/flux-view": "^1.2.0",
-        "@youwol/fv-code-mirror-editors": "^0.3.1",
-        "rxjs": "^6.5.5",
-        "@youwol/http-clients": "^2.0.5",
-        "@youwol/http-primitives": "^0.1.2",
-        "@youwol/os-top-banner": "^0.1.2"
+        "@youwol/webpm-client": "^3.0.0",
+        "@youwol/rx-vdom": "^1.0.1",
+        "@youwol/rx-code-mirror-editors": "^0.4.1",
+        "rxjs": "^7.5.6",
+        "@youwol/http-clients": "^3.0.0",
+        "@youwol/http-primitives": "^0.2.0",
+        "@youwol/os-top-banner": "^0.2.0"
     },
     "includedInBundle": {}
 }
 const externals = {
-    "@youwol/cdn-client": "window['@youwol/cdn-client_APIv2']",
-    "@youwol/flux-view": "window['@youwol/flux-view_APIv1']",
-    "@youwol/fv-code-mirror-editors": "window['@youwol/fv-code-mirror-editors_APIv03']",
-    "rxjs": "window['rxjs_APIv6']",
-    "@youwol/http-clients": "window['@youwol/http-clients_APIv2']",
-    "@youwol/http-primitives": "window['@youwol/http-primitives_APIv01']",
-    "@youwol/os-top-banner": "window['@youwol/os-top-banner_APIv01']",
-    "rxjs/operators": "window['rxjs_APIv6']['operators']"
+    "@youwol/webpm-client": "window['@youwol/webpm-client_APIv3']",
+    "@youwol/rx-vdom": "window['@youwol/rx-vdom_APIv1']",
+    "@youwol/rx-code-mirror-editors": "window['@youwol/rx-code-mirror-editors_APIv04']",
+    "rxjs": "window['rxjs_APIv7']",
+    "@youwol/http-clients": "window['@youwol/http-clients_APIv3']",
+    "@youwol/http-primitives": "window['@youwol/http-primitives_APIv02']",
+    "@youwol/os-top-banner": "window['@youwol/os-top-banner_APIv02']"
 }
 const exportedSymbols = {
-    "@youwol/cdn-client": {
-        "apiKey": "2",
-        "exportedSymbol": "@youwol/cdn-client"
+    "@youwol/webpm-client": {
+        "apiKey": "3",
+        "exportedSymbol": "@youwol/webpm-client"
     },
-    "@youwol/flux-view": {
+    "@youwol/rx-vdom": {
         "apiKey": "1",
-        "exportedSymbol": "@youwol/flux-view"
+        "exportedSymbol": "@youwol/rx-vdom"
     },
-    "@youwol/fv-code-mirror-editors": {
-        "apiKey": "03",
-        "exportedSymbol": "@youwol/fv-code-mirror-editors"
+    "@youwol/rx-code-mirror-editors": {
+        "apiKey": "04",
+        "exportedSymbol": "@youwol/rx-code-mirror-editors"
     },
     "rxjs": {
-        "apiKey": "6",
+        "apiKey": "7",
         "exportedSymbol": "rxjs"
     },
     "@youwol/http-clients": {
-        "apiKey": "2",
+        "apiKey": "3",
         "exportedSymbol": "@youwol/http-clients"
     },
     "@youwol/http-primitives": {
-        "apiKey": "01",
+        "apiKey": "02",
         "exportedSymbol": "@youwol/http-primitives"
     },
     "@youwol/os-top-banner": {
-        "apiKey": "01",
+        "apiKey": "02",
         "exportedSymbol": "@youwol/os-top-banner"
     }
 }
@@ -55,9 +54,9 @@ const exportedSymbols = {
 const mainEntry : {entryFile: string,loadDependencies:string[]} = {
     "entryFile": "./main.ts",
     "loadDependencies": [
-        "@youwol/cdn-client",
-        "@youwol/flux-view",
-        "@youwol/fv-code-mirror-editors",
+        "@youwol/webpm-client",
+        "@youwol/rx-vdom",
+        "@youwol/rx-code-mirror-editors",
         "rxjs",
         "@youwol/http-clients",
         "@youwol/http-primitives",
@@ -74,7 +73,7 @@ const entries = {
 export const setup = {
     name:'@youwol/js-playground',
         assetId:'QHlvdXdvbC9qcy1wbGF5Z3JvdW5k',
-    version:'0.2.3-wip',
+    version:'0.2.4-wip',
     shortDescription:"Small playground for index.html + js application",
     developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/js-playground&tab=doc',
     npmPackage:'https://www.npmjs.com/package/@youwol/js-playground',
@@ -120,7 +119,7 @@ export const setup = {
         const parameters = installParameters || {}
         const scripts = [
             ...(parameters.scripts || []),
-            `@youwol/js-playground#0.2.3-wip~dist/@youwol/js-playground/${entry.name}.js`
+            `@youwol/js-playground#0.2.4-wip~dist/@youwol/js-playground/${entry.name}.js`
         ]
         const modules = [
             ...(parameters.modules || []),
