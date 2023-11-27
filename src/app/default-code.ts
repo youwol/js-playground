@@ -1,6 +1,6 @@
 export const example = `<!DOCTYPE html>
 <html lang="en">
-    <head><script src="https://webpm.org/^2.2.0/webpm-client.js"></script></head>
+    <head><script src="https://webpm.org/^3.0.0/webpm-client.js"></script></head>
     
     <body id="content"></body>    
     
