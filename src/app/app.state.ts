@@ -1,7 +1,14 @@
-import { Common } from '@youwol/fv-code-mirror-editors'
+import { Common } from '@youwol/rx-code-mirror-editors'
 import { example } from './default-code'
-import { BehaviorSubject, Observable, of, Subject } from 'rxjs'
-import { mergeMap, tap, withLatestFrom } from 'rxjs/operators'
+import {
+    BehaviorSubject,
+    Observable,
+    of,
+    Subject,
+    mergeMap,
+    tap,
+    withLatestFrom,
+} from 'rxjs'
 
 const encoded = new URLSearchParams(window.location.search).get('content')
 
@@ -32,6 +39,6 @@ export class AppState {
     }
 
     execute() {
-        this.run$.next()
+        this.run$.next(undefined)
     }
 }
