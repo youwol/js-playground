@@ -18,13 +18,13 @@ folder_path = Path(__file__).parent
 pkg_json = parse_json(folder_path / "package.json")
 
 externals = {
-    "@youwol/cdn-client": "^2.0.6",
-    "@youwol/flux-view": "^1.2.0",
-    "@youwol/fv-code-mirror-editors": "^0.3.1",
-    "rxjs": "^6.5.5",
-    "@youwol/http-clients": "^2.0.5",
-    "@youwol/http-primitives": "^0.1.2",
-    "@youwol/os-top-banner": "^0.1.2",
+    "@youwol/webpm-client": "^3.0.0",
+    "@youwol/rx-vdom": "^1.0.1",
+    "@youwol/rx-code-mirror-editors": "^0.4.1",
+    "rxjs": "^7.5.6",
+    "@youwol/http-clients": "^3.0.0",
+    "@youwol/http-primitives": "^0.2.0",
+    "@youwol/os-top-banner": "^0.2.0",
 }
 
 template = Template(
