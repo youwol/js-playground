@@ -1,42 +1,26 @@
 
 const runTimeDependencies = {
     "externals": {
-        "@youwol/webpm-client": "^3.0.0",
-        "@youwol/rx-vdom": "^1.0.1",
-        "@youwol/rx-code-mirror-editors": "^0.5.0",
-        "rxjs": "^7.5.6",
         "@youwol/http-clients": "^3.0.0",
         "@youwol/http-primitives": "^0.2.0",
-        "@youwol/os-top-banner": "^0.2.0"
+        "@youwol/os-top-banner": "^0.2.0",
+        "@youwol/rx-code-mirror-editors": "^0.5.0",
+        "@youwol/rx-vdom": "^1.0.1",
+        "@youwol/webpm-client": "^3.0.0",
+        "rxjs": "^7.5.6"
     },
     "includedInBundle": {}
 }
 const externals = {
-    "@youwol/webpm-client": "window['@youwol/webpm-client_APIv3']",
-    "@youwol/rx-vdom": "window['@youwol/rx-vdom_APIv1']",
-    "@youwol/rx-code-mirror-editors": "window['@youwol/rx-code-mirror-editors_APIv05']",
-    "rxjs": "window['rxjs_APIv7']",
     "@youwol/http-clients": "window['@youwol/http-clients_APIv3']",
     "@youwol/http-primitives": "window['@youwol/http-primitives_APIv02']",
-    "@youwol/os-top-banner": "window['@youwol/os-top-banner_APIv02']"
+    "@youwol/os-top-banner": "window['@youwol/os-top-banner_APIv02']",
+    "@youwol/rx-code-mirror-editors": "window['@youwol/rx-code-mirror-editors_APIv05']",
+    "@youwol/rx-vdom": "window['@youwol/rx-vdom_APIv1']",
+    "@youwol/webpm-client": "window['@youwol/webpm-client_APIv3']",
+    "rxjs": "window['rxjs_APIv7']"
 }
 const exportedSymbols = {
-    "@youwol/webpm-client": {
-        "apiKey": "3",
-        "exportedSymbol": "@youwol/webpm-client"
-    },
-    "@youwol/rx-vdom": {
-        "apiKey": "1",
-        "exportedSymbol": "@youwol/rx-vdom"
-    },
-    "@youwol/rx-code-mirror-editors": {
-        "apiKey": "05",
-        "exportedSymbol": "@youwol/rx-code-mirror-editors"
-    },
-    "rxjs": {
-        "apiKey": "7",
-        "exportedSymbol": "rxjs"
-    },
     "@youwol/http-clients": {
         "apiKey": "3",
         "exportedSymbol": "@youwol/http-clients"
@@ -48,6 +32,22 @@ const exportedSymbols = {
     "@youwol/os-top-banner": {
         "apiKey": "02",
         "exportedSymbol": "@youwol/os-top-banner"
+    },
+    "@youwol/rx-code-mirror-editors": {
+        "apiKey": "05",
+        "exportedSymbol": "@youwol/rx-code-mirror-editors"
+    },
+    "@youwol/rx-vdom": {
+        "apiKey": "1",
+        "exportedSymbol": "@youwol/rx-vdom"
+    },
+    "@youwol/webpm-client": {
+        "apiKey": "3",
+        "exportedSymbol": "@youwol/webpm-client"
+    },
+    "rxjs": {
+        "apiKey": "7",
+        "exportedSymbol": "rxjs"
     }
 }
 
